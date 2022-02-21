@@ -1,0 +1,43 @@
+name: Hook
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.24.1
+
+      - name: use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+          cache: 'pnpm'
+      
+      - run: pnpm install
+
+      - name: Lint
+        run: pnpm run lint --if-present
+
+      - name: Test
+        run: pnpm run test --if-present

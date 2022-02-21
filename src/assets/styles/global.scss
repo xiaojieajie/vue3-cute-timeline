@@ -1,0 +1,73 @@
+html,
+body {
+  font-family: "微软雅黑", "Microsoft YaHei", "Arial Regulal", Arial, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #000000;
+  user-select: none;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+input {
+  font-family: "微软雅黑", "Microsoft YaHei", "Arial Regulal", Arial, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", sans-serif;
+  outline: none;
+}
+
+div,
+form,
+img,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+  border: none;
+}
+
+li {
+  list-style-type: none
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #425F92;
+}
+
+a:hover {
+  color: #1764E8
+}
+
+div,form,img,ul,ol,li,dl,dt,dd {
+  &::-webkit-scrollbar-track-piece {
+    background-color: none
+  }
+}
+
+div,form,img,ul,ol,li,dl,dt,dd {
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 10px;
+  }
+}
+
+div,form,img,ul,ol,li,dl,dt,dd {
+  &::-webkit-scrollbar-thumb {
+    background-color: #BDC8DB;
+    background-clip: padding-box;
+    min-height: 28px;
+    border-radius: 6px;
+  }
+}

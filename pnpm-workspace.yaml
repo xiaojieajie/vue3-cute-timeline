@@ -1,0 +1,7 @@
+packages:
+  - 'playground'
+  - 'packages/*'
+  - 'bench'
+  - 'docs'
+  - '!packages/vscode'
+  - '!**/test/**'
