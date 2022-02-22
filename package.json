@@ -1,9 +1,10 @@
 {
   "name": "vue3-timeline",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "description": "Vue3 时间线组件 ",
-  "main": "dist/vue3-timeline.js",
+  "module": "./dist/vue3-timeline.ts.js",
+  "main": "./dist/vue3-timeline.umd.js",
   "keywords": [
     "timeline",
     "vue-timeline",
