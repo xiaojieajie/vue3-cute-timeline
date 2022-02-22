@@ -1,24 +1,15 @@
 {
   "name": "vue3-cute-timeline",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "private": false,
   "description": "Vue3 时间线组件 ",
   "module": "dist/vue3-timeline.es.js",
   "main": "dist/vue3-timeline.umd.js",
+  "types": "types/index.d.ts",
   "files": [
     "dist",
     "types"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/vue3-timeline.es.js",
-      "require": "./dist/vue3-timeline.umd.js"
-    },
-    "./dist/style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
-    }
-  },
   "keywords": [
     "timeline",
     "vue-timeline",
