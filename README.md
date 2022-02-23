@@ -1,46 +1,148 @@
+# 前言
 
-<h1 align="center">Vue3 Template</h1>
+[DEMO](https://vue-cute-timeline.netlify.com/)
 
-<p align="center">采用
-<a href="https://vitejs.dev/"><img width="30" src="https://vitejs.dev/logo.svg" /></a>搭建</p>
+翻遍github没有找到 vue3 可以使用的 **timeline** 组件，只找到了一个vue2的
 
-# services
+但是看原作者(luyilin)没有升级vue3的计划，我就自己升级了一下，感谢luyilin大佬
 
-User 是接口书写示例，请根据自己的业务进行书写
-
+[vue2版](https://github.com/luyilin/vue-cute-timeline)
 # Env
-`node` >= @v14
 
-`vite` >= @v2.0
+`vue` >= @v3
 
-# Features
+# Install
 
-- 完美的[typescript](https://www.tslang.cn/docs/home.html)支持
-- 灵活的[unocss](https://github.com/antfu/unocss) <img width="30" src="https://raw.githubusercontent.com/antfu/unocss/main/playground/public/icon-gray.svg" />构建 
-- [pinia](https://pinia.vuejs.org/) 状态管理
-- etc.
+```
+pnpm i vue3-cute-timeline or npm i vue3-cute-timeline or yarn add vue3-cute-timeline
+```
 
-# Docs
-提供以下文档学习，随时补充。
+# Usage
 
-- [vue3](https://staging-cn.vuejs.org/)
-- [vue-router@next](https://next.router.vuejs.org/zh/)
-- [pinia](https://pinia.vuejs.org/) (状态管理，代理vuex)
-- [unocss](https://github.com/antfu/unocss) (原子化css)
-- etc.
+## 局部引入
+main.ts
+```ts
+import 'vue3-cute-timeline/dist/style.css'
+```
+```vue
+<script lang="ts" setup>
+import { Timeline, TimelineTitle, TimelineItem } from 'vue3-cute-timeline'
+</script>
+```
+
+![2022-02-22.png](https://s2.loli.net/2022/02/22/BlEA3ZW7fIOaRsT.png)
 
 
-# vite插件
+## 全局引入
 
-- [vite-plugin-md](https://github.com/antfu/vite-plugin-md)
-- [vite-plugin-vue-layouts](https://github.com/johncampionjr/vite-plugin-vue-layouts) (约定式路由，layout布局)
-- [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) (约定式路由，页面)
-<!-- - [vite-plugin-vue-images](https://github.com/sampullman/vite-plugin-vue-images) (直接使用图片文件，不需要导入) -->
-- [vite-plugin-vue-setup-extend](https://github.com/vbenjs/vite-plugin-vue-setup-extend) (给vue组件配置name属性)
-- [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)（自动导入组件）
-- [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#readme)（自动导入Api）
+main.ts
 
-# Project Activity 
+```ts
+import { plugin } from 'vue3-cute-timeline'
+import 'vue3-cute-timeline/dist/style.css'
+const app = createApp(App)
+app.use(plugin)
+```
 
-![Alt](https://repobeats.axiom.co/api/embed/976bad85b219dc8d14cbeff17794c65d6148e600.svg "Repobeats analytics image")
 
+![2022-02-22.png](https://s2.loli.net/2022/02/22/BlEA3ZW7fIOaRsT.png)
+
+# API
+
+### `<timeline>` props
+
+使用连字符的属性比使用驼峰大小写的属性更好。[The discussion](https://stackoverflow.com/questions/1696864/naming-class-and-id-html-attributes-dashes-vs-underlines) 解释了原因。
+
+- `theme`
+
+  时间轴组件的主题颜色，设置线和圆的颜色
+
+  ```
+  Type: string
+  Default: #dbdde0
+  ```
+
+- `background`
+
+  设置空圆和其他时间轴符号的默认背景颜色
+
+  ```
+  Type: string
+  Default: #dbdde0
+  ```
+
+## `<timeline-item>` / `<timeline-title>` props
+
+
+- `bg-color`
+
+  设置圆和圆的边框颜色
+
+  ```
+  Type: string
+  Default: #dbdde0
+  ```
+
+- `line-color`
+
+  只设置圆的边框颜色
+
+  ```
+  Type: string
+  Default: #dbdde0
+  ```
+
+- `hollow`
+
+  控制圆是否是空心的。
+
+  **注意：不能与bg-color一起使用，除非您希望更改空背景色**
+
+  ```
+  Type: boolean
+  Default: false
+  ```
+- `font-color`
+
+  设置时间轴文字或者标题文字颜色。
+
+  或者可以用className自行设置，因为内部本身是插槽
+
+  ```
+  Type: string
+  Default: #37414a
+  ```
+
+- `icon-size`
+
+  设置圆形图标大小
+
+  `slots="others"`.
+
+  ```
+  Type: string ('small'| 'medium'|'large')
+  Default: ''
+  ```
+
+## Slots
+
+- `others`
+
+  Don't like the circle? You can set it to a image, iconfont or anything you want.
+
+  ```html
+  <timeline-item>
+    <template #others>
+      <img
+        src="https://user-images.githubusercontent.com/12069729/36057805-80cfc3d2-0e4e-11e8-8851-6fda091ff389.png"
+        class="icon-heart"
+    />
+    </template>
+  </timeline-item>
+  ```
+
+## License
+
+MIT &copy; [xiaojieajie](https://github.com/xiaojieajie)
+
+> [漆黑之牙](https://llongjie.top) · GitHub [@xiaojieajie](https://github.com/xiaojieajie)

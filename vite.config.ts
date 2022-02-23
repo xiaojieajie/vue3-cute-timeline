@@ -1,55 +1,34 @@
-import { resolve } from 'path'
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import Unocss from 'unocss/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import Pages from 'vite-plugin-pages'
-import Layouts from 'vite-plugin-vue-layouts'
-import Markdown from 'vite-plugin-md'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
-// import ViteImages from 'vite-plugin-vue-images'
+import AutoImport from 'unplugin-auto-import/vite'
 
-const pathResolve = (src: string) => resolve(__dirname, src)
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    Unocss(),
-    Pages({ extensions: ['vue', 'md'] }),
-    Layouts(),
+    VueSetupExtend(),
     AutoImport({
-      imports: ['vue', 'pinia', 'vue-router', '@vueuse/core'],
-      dts: 'src/auto-imports.d.ts'
-    }),
-    Components({
-      extensions: ['vue', 'md'],
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dts: 'src/components.d.ts'
-    }),
-    Markdown(),
-    VueSetupExtend()
-    // ViteImages()
+      imports: ['vue'],
+      dts: 'auto-imports.d.ts'
+    })
   ],
   server: {
-    proxy: {
-      '/xxx': {
-        target: 'https://xxx',
-        changeOrigin: true
-      }
+    port: 5008
+  },
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, 'packages/index.ts'),
+      name: 'vue3-timeline',
+      fileName: format => `vue3-timeline.${format}.js`
     },
-    host: '0.0.0.0'
-  },
-  resolve: {
-    alias: {
-      '@': pathResolve('src'),
-      '@a': pathResolve('src/assets')
-    }
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@import "./src/assets/styles/variable.scss";'
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
       }
     }
   }

@@ -1,8 +1,6 @@
 import { createApp } from 'vue'
+import { plugin } from '../packages/index'
 import App from './App.vue'
-import 'uno.css'
-import '@a/styles/index.scss'
-import { registerModules } from './module'
-
-const app = registerModules(createApp(App))
+const app = createApp(App)
+app.use(plugin)
 app.mount('#app')
