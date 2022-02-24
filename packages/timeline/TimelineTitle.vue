@@ -1,6 +1,13 @@
 <script setup lang="ts" name="TimelineTitle">
 import { useInit } from './hook'
-import type { IBaseProps } from './hook'
+// import type { IBaseProps } from './hook'
+interface IBaseProps {
+  bgColor?: string
+  lineColor?: string
+  hollow?: boolean
+  iconSize?: string
+  fontColor?: string
+}
 const props = withDefaults(defineProps<IBaseProps>(), {
   hollow: false,
   fontColor: '#37414a'

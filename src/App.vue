@@ -55,8 +55,20 @@
           <TimelineItem bg-color="#9dd8e0" font-color="#e166ab">
             祝大家虎年大吉
           </TimelineItem>
-          <timeline-item :hollow="true" bg-color="#e6b6b0">
+          <timeline-item :hollow="true" font-color="#fff">
             虎虎生威 🎉
+          </timeline-item>
+          <timeline-item font-color="#fff">
+            哈哈哈
+          </timeline-item>
+          <timeline-item line-color="#a6ade4">
+            <p style="color: #fff;">
+              欢迎来看看
+              <a href="https://llongjie.top">我的博客</a>
+            </p>
+            <p class="append" style="color: #fff;">
+              6666666666666666666666666666
+            </p>
           </timeline-item>
         </timeline>
       </div>

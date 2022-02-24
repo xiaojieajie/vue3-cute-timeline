@@ -14,7 +14,7 @@
 # Install
 
 ```
-pnpm i vue3-cute-timeline or npm i vue3-cute-timeline or yarn add vue3-cute-timeline
+pnpm i vue3-timeline or npm i vue3-timeline or yarn add vue3-timeline
 ```
 
 # Usage
@@ -22,11 +22,11 @@ pnpm i vue3-cute-timeline or npm i vue3-cute-timeline or yarn add vue3-cute-time
 ## 局部引入
 main.ts
 ```ts
-import 'vue3-cute-timeline/dist/style.css'
+import 'vue3-timeline/dist/style.css'
 ```
 ```vue
 <script lang="ts" setup>
-import { Timeline, TimelineTitle, TimelineItem } from 'vue3-cute-timeline'
+import { Timeline, TimelineTitle, TimelineItem } from 'vue3-timeline'
 </script>
 ```
 
@@ -38,8 +38,8 @@ import { Timeline, TimelineTitle, TimelineItem } from 'vue3-cute-timeline'
 main.ts
 
 ```ts
-import { plugin } from 'vue3-cute-timeline'
-import 'vue3-cute-timeline/dist/style.css'
+import { plugin } from 'vue3-timeline'
+import 'vue3-timeline/dist/style.css'
 const app = createApp(App)
 app.use(plugin)
 ```
