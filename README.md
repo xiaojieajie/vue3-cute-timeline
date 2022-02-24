@@ -1,6 +1,6 @@
 # 前言
 
-[DEMO](https://vue-cute-timeline.netlify.com/)
+[DEMO](https://vue3-timeline.netlify.app/)
 
 翻遍github没有找到 vue3 可以使用的 **timeline** 组件，只找到了一个vue2的
 
