@@ -52,7 +52,7 @@ export const useInit = (props: IBaseProps) => {
   })
 
   onMounted(() => {
-    slotOthers.value = !!othersRef.value!.innerHTML
+    slotOthers.value = !!useSlots().others
   })
 
   return { circleStyle, itemStyle, slotClass, othersRef }
