@@ -1,6 +1,6 @@
 {
   "name": "vue3-timeline",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "description": "Vue3 时间线组件 ",
   "module": "dist/vue3-timeline.es.js",
@@ -24,7 +24,8 @@
     "lint": "eslint \"**/*.{vue,ts,js}\"",
     "test": "vitest",
     "lint:fix": "npm run lint -- --fix",
-    "release": "bumpp package.json --commit --push --tag"
+    "release": "bumpp package.json --commit --push --tag",
+    "publish": "npm run release"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
