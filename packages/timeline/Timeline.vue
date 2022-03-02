@@ -74,14 +74,14 @@ withDefaults(defineProps<{
   }
   .timeline-title-circle {
     left: -36px;
-    top: .15em;
+    top: 0;
     width: 16px;
     height: 16px;
   }
   .timeline-others {
     width: 40px;
     height: auto;
-    top: .2em;
+    top: -2px;
     left: -48px;
     line-height: 1;
     padding: 2px 0;

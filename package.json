@@ -6,6 +6,13 @@
   "module": "dist/vue3-timeline.es.js",
   "main": "dist/vue3-timeline.umd.js",
   "types": "types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaojieajie/vue3-timeline"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaojieajie/vue3-timeline/issues"
+  },
   "files": [
     "dist",
     "types"
@@ -24,7 +31,8 @@
     "lint": "eslint \"**/*.{vue,ts,js}\"",
     "test": "vitest",
     "lint:fix": "npm run lint -- --fix",
-    "release": "pnpm build && bumpp package.json --commit --push --tag"
+    "release": "pnpm build && bumpp package.json --commit --push --tag",
+    "publish": "pnpm -r publish --access public --no-git-checks"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
