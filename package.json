@@ -1,38 +1,38 @@
 {
   "name": "vue3-timeline",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "private": false,
   "description": "Vue3 时间线组件 ",
-  "module": "dist/vue3-timeline.es.js",
-  "main": "dist/vue3-timeline.umd.js",
-  "types": "types/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xiaojieajie/vue3-timeline"
-  },
-  "bugs": {
-    "url": "https://github.com/xiaojieajie/vue3-timeline/issues"
-  },
-  "files": [
-    "dist",
-    "types"
-  ],
   "keywords": [
     "timeline",
     "vue-timeline",
     "vue3-timeline",
     "vue3Timeline"
   ],
+  "bugs": {
+    "url": "https://github.com/xiaojieajie/vue3-timeline/issues"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaojieajie/vue3-timeline"
+  },
   "author": "xiaojieajie <https://github.com/xiaojieajie>",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "main": "dist/vue3-timeline.umd.js",
+  "module": "dist/vue3-timeline.es.js",
+  "types": "types/index.d.ts",
   "scripts": {
-    "dev": "vite --mode dev --open",
     "build": "vue-tsc --noEmit && vite build --mode prod",
+    "dev": "vite --mode dev --open",
     "lint": "eslint \"**/*.{vue,ts,js}\"",
-    "test": "vitest",
     "lint:fix": "npm run lint -- --fix",
+    "publish": "pnpm -r publish --access public --no-git-checks",
     "release": "pnpm build && bumpp package.json --commit --push --tag",
-    "publish": "pnpm -r publish --access public --no-git-checks"
+    "test": "vitest"
   },
   "peerDependencies": {
     "vue": "^3.2.0"
