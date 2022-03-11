@@ -1,8 +1,8 @@
 {
   "name": "vue3-cute-component",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "private": false,
-  "description": "Vue3 时间线组件 ",
+  "description": "Vue3 一个漂亮的小组件库 ",
   "keywords": [
     "timeline",
     "vue-timeline",
