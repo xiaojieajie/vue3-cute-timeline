@@ -1,6 +1,6 @@
 {
   "name": "vue3-timeline",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": false,
   "description": "Vue3 时间线组件 ",
   "keywords": [
@@ -35,6 +35,9 @@
   },
   "peerDependencies": {
     "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "vue3-timeline": "workspace: *"
   },
   "devDependencies": {
     "@black-tooth/eslint-config": "0.0.12",
