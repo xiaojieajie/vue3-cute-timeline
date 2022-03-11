@@ -1,13 +1,16 @@
 {
-  "name": "vue3-timeline",
-  "version": "1.2.3",
+  "name": "vue3-cute-component",
+  "version": "0.0.2",
   "private": false,
   "description": "Vue3 时间线组件 ",
   "keywords": [
     "timeline",
     "vue-timeline",
     "vue3-timeline",
-    "vue3Timeline"
+    "vue3Timeline",
+    "cute",
+    "component",
+    "components"
   ],
   "bugs": {
     "url": "https://github.com/xiaojieajie/vue3-timeline/issues"
@@ -37,7 +40,7 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "vue3-timeline": "workspace: *"
+    "vue3-timeline": "workspace:1.2.3"
   },
   "devDependencies": {
     "@black-tooth/eslint-config": "0.0.12",
