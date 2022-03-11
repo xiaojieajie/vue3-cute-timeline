@@ -1,6 +1,6 @@
 {
   "name": "vue3-cute-component",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "private": false,
   "description": "Vue3 一个漂亮的小组件库 ",
   "keywords": [
@@ -40,7 +40,7 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "vue3-timeline": "workspace:1.2.3"
+    "vue3-timeline": "latest"
   },
   "devDependencies": {
     "@black-tooth/eslint-config": "0.0.12",
