@@ -1,6 +1,6 @@
 {
   "name": "vue3-timeline",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": false,
   "description": "Vue3 时间线组件 ",
   "keywords": [
@@ -30,7 +30,6 @@
     "dev": "vite --mode dev --open",
     "lint": "eslint \"**/*.{vue,ts,js}\"",
     "lint:fix": "npm run lint -- --fix",
-    "publish": "pnpm -r publish --access public --no-git-checks",
     "release": "pnpm build && bumpp package.json --commit --push --tag",
     "test": "vitest"
   },
