@@ -1,6 +1,5 @@
 <script setup lang="ts" name="TimelineItem">
 import { useInit } from './hook'
-// import type { IBaseProps } from './hook'
 interface IBaseProps {
   bgColor?: string
   lineColor?: string

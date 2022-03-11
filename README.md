@@ -1,12 +1,10 @@
 # 前言
 
-[DEMO](https://vue3-timeline.netlify.app/)
+[在线预览]](https://vue3-cute-component.netlify.app/)
 
-翻遍github没有找到 vue3 可以使用的 **timeline** 组件，只找到了一个vue2的
+1. timeline
+2. button
 
-但是看原作者(luyilin)没有升级vue3的计划，我就自己升级了一下，感谢luyilin大佬
-
-[vue2版](https://github.com/luyilin/vue-cute-timeline)
 # Env
 
 `vue` >= @v3
@@ -14,7 +12,7 @@
 # Install
 
 ```
-pnpm i vue3-timeline or npm i vue3-timeline or yarn add vue3-timeline
+pnpm i vue3-cute-component or npm i vue3-cute-component or yarn add vue3-cute-component
 ```
 
 # Usage
@@ -22,11 +20,11 @@ pnpm i vue3-timeline or npm i vue3-timeline or yarn add vue3-timeline
 ## 局部引入
 main.ts
 ```ts
-import 'vue3-timeline/dist/style.css'
+import 'vue3-cute-component/dist/style.css'
 ```
 ```vue
 <script lang="ts" setup>
-import { Timeline, TimelineTitle, TimelineItem } from 'vue3-timeline'
+import { Timeline, TimelineTitle, TimelineItem } from 'vue3-cute-component'
 </script>
 ```
 
@@ -38,8 +36,8 @@ import { Timeline, TimelineTitle, TimelineItem } from 'vue3-timeline'
 main.ts
 
 ```ts
-import { plugin } from 'vue3-timeline'
-import 'vue3-timeline/dist/style.css'
+import { plugin } from 'vue3-cute-component'
+import 'vue3-cute-component/dist/style.css'
 const app = createApp(App)
 app.use(plugin)
 ```
@@ -47,7 +45,16 @@ app.use(plugin)
 
 ![2022-02-22.png](https://s2.loli.net/2022/02/22/BlEA3ZW7fIOaRsT.png)
 
-# API
+# Timeline
+
+
+翻遍github没有找到 vue3 可以使用的 **timeline** 组件，只找到了一个vue2的
+
+但是看原作者(luyilin)没有升级vue3的计划，我就自己升级了一下，感谢luyilin大佬
+
+[vue2版](https://github.com/luyilin/vue-cute-timeline)
+
+## API
 
 ### `<timeline>` props
 
@@ -139,6 +146,103 @@ app.use(plugin)
     />
     </template>
   </timeline-item>
+  ```
+
+# Button
+
+## 全局引入同上
+
+## 局部引入
+
+main.ts
+```ts
+import 'vue3-cute-component/dist/style.css'
+```
+```vue
+<script lang="ts" setup>
+import { GdButton } from 'vue3-cute-component'
+</script>
+```
+
+- `text`
+
+  按钮文字
+
+  ```
+  Type: string
+  Default: 按钮
+  ```
+
+- `icon`
+
+  按钮左边的小图标，必须是一个类似这样的字体
+  这里提供几个：✪ ✆ ✰ ✿ ✍ ☺ ✪  ✔
+
+  ```
+  Type: string
+  Default: ✿
+  ```
+
+- `color`
+
+  按钮整体颜色，有物种颜色供你选择
+  1. blue
+  2. pink
+  3. glass
+  4. orange
+  5. gray
+
+  ```
+  Type: string
+  Default: blue
+  ```
+
+- `fontSize`
+
+  按钮文字大小
+
+  ```
+  Type: string
+  Default: 16px
+  ```
+
+- `padding`
+
+  按钮padding
+
+  ```
+  Type: string
+  Default: .5em 1.2em .4em 1.2em
+  ```
+
+- `padding`
+
+  按钮padding
+
+  ```
+  Type: string
+  Default: .5em 1.2em .4em 1.2em
+  ```
+
+- `type`
+
+  按钮类型
+  1. bracket
+  2. arc
+  3. flat
+
+  ```
+  Type: string
+  Default: bracket
+  ```
+
+- `only-icon`
+
+  是否只能有图标
+  
+  ```
+  Type: boolean
+  Default: false
   ```
 
 ## License

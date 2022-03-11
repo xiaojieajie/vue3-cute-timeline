@@ -40,7 +40,7 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "vue3-timeline": "latest"
+    "vue3-cute-component": "workspace:^1.2.8"
   },
   "devDependencies": {
     "@black-tooth/eslint-config": "0.0.12",

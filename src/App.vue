@@ -73,11 +73,51 @@
         </timeline>
       </div>
     </div>
+    <div style="display: flex; flex-direction: column;">
+      <h1>button组件展示</h1>
+      <div style="display: flex; gap: 10px;">
+        <div>
+          orange：<GdButton color="orange" />
+        </div>
+        <div>
+          gray：<GdButton color="gray" />
+        </div>
+        <div>
+          blue: <GdButton color="blue" text="哈哈" />
+        </div>
+        <div>
+          pink: <GdButton color="pink" text="哈哈" />
+        </div>
+        <div>
+          glass: <GdButton color="glass" text="哈哈" />
+        </div>
+      </div>
+      <div style="display: flex; gap: 10px;margin-top: 10px;">
+        <div>
+          type-bracket：<GdButton color="orange" type="bracket" />
+        </div>
+        <div>
+          type-arc：<GdButton color="gray" type="arc" />
+        </div>
+        <div>
+          type-flat: <GdButton color="gray" text="哈哈" type="flat" />
+        </div>
+      </div>
+      <div style="display: flex; gap: 10px;margin-top: 10px;">
+        <div>
+          onlyIcon：<GdButton color="orange" icon="" :only-icon="true" />
+        </div>
+        <div>
+          onlyIcon：<GdButton color="blue" type="bracket" icon="✔" :only-icon="true" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-// import { Timeline, TimelineItem, TimelineTitle } from '../packages/index'
+// import { GdButton, Timeline, TimelineItem, TimelineTitle } from 'vue3-timeline'
+import { Timeline, TimelineItem, TimelineTitle } from '../packages/index'
 </script>
 
 <style>
