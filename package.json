@@ -1,6 +1,6 @@
 {
   "name": "vue3-cute-component",
-  "version": "1.2.8",
+  "version": "1.3.0",
   "private": false,
   "description": "Vue3 一个漂亮的小组件库 ",
   "keywords": [
@@ -25,8 +25,8 @@
     "dist",
     "types"
   ],
-  "main": "dist/vue3-timeline.umd.js",
-  "module": "dist/vue3-timeline.es.js",
+  "main": "dist/vue3-cute-component.umd.js",
+  "module": "dist/vue3-cute-component.es.js",
   "types": "types/index.d.ts",
   "scripts": {
     "build": "vue-tsc --noEmit && vite build --mode prod",
