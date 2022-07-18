@@ -55,6 +55,6 @@
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vitest": "0.5.0",
     "vue": "^3.2.29",
-    "vue-tsc": "0.31.4"
+    "vue-tsc": "0.38.8"
   }
 }
